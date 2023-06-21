@@ -24,15 +24,12 @@ syntax region klogEntry start="^\t\|\ \{2,4}<\=\d\{1,2}:\d\{2}\(\(am\)\|\(pm\)\)
 syntax match klogTimespan "\(^\t\|\ \{2,4}\)\@<=<\=\d\{1,2}:\d\{2}\(\(am\)\|\(pm\)\)\=>\= - \(?\+\|\(\d\{1,2}:\d\{2}\(\(am\)\|\(pm\)\)\=>\=\)\)" contained
 
 " Highlight
-highlight default link klogTag Identifier
+highlight default link klogTag String
 highlight default link klogRecord Underlined
 highlight default link klogShould Statement
-highlight default link klogRecordSummary Comment
-highlight default link klogEntrySummary Comment
-highlight default link klogEntry Comment
 highlight default link klogPosDuration Type
-highlight default link klogNegDuration String
-highlight default link klogTimespan Keyword
+highlight default link klogNegDuration Type
+highlight default link klogTimespan Type
 " String
 
 let b:current_syntax = 'klog'
